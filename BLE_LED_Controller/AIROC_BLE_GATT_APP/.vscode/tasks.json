@@ -1,0 +1,370 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build: Build [Debug]",
+            "type": "shell",
+
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build: Clean and Rebuild [Debug]",
+            "type": "shell",
+
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean ; make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean ; make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build: Clean [Debug]",
+            "type": "shell",
+
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Debug TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build: Build [Release]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build: Clean and Rebuild [Release]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean ; make -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean ; make -j CONFIG=Release TARGET=CYW920835M2EVB-01 build"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build: Clean [Release]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j CONFIG=Release TARGET=CYW920835M2EVB-01 clean"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Program: build and download app [Release]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j TARGET=CYW920835M2EVB-01 CONFIG=Release program"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Release program"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Release program"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Program: build and download app [Debug]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j TARGET=CYW920835M2EVB-01 CONFIG=Debug program"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Debug program"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Debug program"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Program: just download app [Release]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j TARGET=CYW920835M2EVB-01 CONFIG=Release qprogram"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Release qprogram"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Release qprogram"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Program: just download app [Debug]",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe -j TARGET=CYW920835M2EVB-01 CONFIG=Debug qprogram"
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Debug qprogram"
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make -j TARGET=CYW920835M2EVB-01 CONFIG=Debug qprogram"
+                ]
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Tool: Library Manager",
+            "type": "shell",
+            "windows" : {
+                "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe" ,
+                "args": [
+                    "--norc",
+                    "-c",
+                    "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe modlibs CY_CONFIG_JOB_CONTROL="
+                ]
+            },
+            "linux" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make modlibs CY_CONFIG_JOB_CONTROL="
+                ]
+            },
+            "osx" : {
+                "command": "bash",
+                "args": [
+                    "--norc",
+                    "-c",
+                    "make modlibs CY_CONFIG_JOB_CONTROL="
+                ]
+            },
+            "problemMatcher": "$gcc"
+        },
+        { "label": "Tool: BTSpy", "type": "shell", "windows" : { "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe", "args": ["--norc","-c", "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe open CY_OPEN_TYPE=BTSpy CY_CONFIG_JOB_CONTROL="], }, "linux" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=BTSpy CY_CONFIG_JOB_CONTROL="], }, "osx" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=BTSpy CY_CONFIG_JOB_CONTROL="], }, "problemMatcher": "$gcc", }, { "label": "Tool: ClientControl", "type": "shell", "windows" : { "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe", "args": ["--norc","-c", "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe open CY_OPEN_TYPE=ClientControl CY_CONFIG_JOB_CONTROL="], }, "linux" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=ClientControl CY_CONFIG_JOB_CONTROL="], }, "osx" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=ClientControl CY_CONFIG_JOB_CONTROL="], }, "problemMatcher": "$gcc", }, { "label": "Tool: hello_client", "type": "shell", "windows" : { "command": "${config:modustoolbox.toolsPath}/modus-shell/bin/bash.exe", "args": ["--norc","-c", "export PATH=/bin:/usr/bin:$PATH ; ${config:modustoolbox.toolsPath}/modus-shell/bin/make.exe open CY_OPEN_TYPE=hello_client CY_CONFIG_JOB_CONTROL="], }, "linux" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=hello_client CY_CONFIG_JOB_CONTROL="], }, "osx" : { "command": "bash", "args": ["--norc","-c","make open CY_OPEN_TYPE=hello_client CY_CONFIG_JOB_CONTROL="], }, "problemMatcher": "$gcc", },
+    ]
+}
